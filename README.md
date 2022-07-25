@@ -18,11 +18,12 @@ We may only merge PRs that adhere to the instructions above and that are safe an
 Follow the Demo at Simple Balance Check (https://github.com/AlgoKnox/ASCBuilder_Templates/SimpleBalanceCheck) to get a hang of how the commits are to be structured and of course, shoot!
 
 ```
-  -- project_folder
-  
-    -- source.json
-    
-    -- README.md
+-- project_folder
+
+   -- source.json
+
+   -- README.md
+   
 ```
 
 All PRs are warmly welcome in this repository.
