@@ -6,10 +6,11 @@ A collection of community-tailored Smart contract JSON schemas for the ASC Build
 2. Export the JSON schema and download it.
 3. Clone this repository.
 4. Save the name of the schema as source.json and upload it to a folder with the name of your intended smart contract.
-5. Add a README.md file into the folder that explains what your smart contract does.
-6. The folder names should only contain alphabets, numbers and underscores.
-7. Upload the folder to this repository and make a PR. 
-8. Hurray!
+5. Optionally, you could add the .py result (PyTEAL code) and save it as source.py in the same folder.
+6. Add a README.md file into the folder that explains what your smart contract does.
+7. The folder names should only contain alphabets, numbers and underscores.
+8. Upload the folder to this repository and make a PR. 
+9. Hurray!
 
 ## Merges
 We may only merge PRs that adhere to the instructions above and that are safe and reasonable/necessary solutions for other developers on Algorand.
