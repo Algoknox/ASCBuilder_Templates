@@ -22,8 +22,7 @@ Follow the Demo at Simple Balance Check (https://github.com/AlgoKnox/ASCBuilder_
 
    -- source.json
 
-   -- README.md
-   
+   -- README.md   
 ```
 
 All PRs are warmly welcome in this repository.
