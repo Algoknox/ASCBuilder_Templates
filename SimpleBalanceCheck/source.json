@@ -1,0 +1,257 @@
+{
+    "methods": {
+        "simple_Call": [
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "txn_sender",
+                        "operator": "==",
+                        "operand_two": "creator_address"
+                    },
+                    "tab": 5
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "algo_balance",
+                        "operator": "&gt;=",
+                        "operand_two": "minimum_amount"
+                    },
+                    "tab": 6
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 7
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 7
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "approve"
+                    },
+                    "tab": 8
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 3
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 3
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "reject"
+                    },
+                    "tab": 9
+                }
+            ]
+        ]
+    },
+    "app": {
+        "type": "app",
+        "name": "body",
+        "data": {
+            "localNumUints": 8,
+            "localNumBytes": 8,
+            "globalNumUints": 32,
+            "globalNumBytes": 32
+        }
+    },
+    "nodes": 9,
+    "node_counter_": 9,
+    "contract_schema": {
+        "variables": [
+            {
+                "type": "address",
+                "name": "txn_sender",
+                "method": "simple_Call",
+                "fields": {
+                    "variable-name": "txn_sender",
+                    "variable-selection": "Txn.sender()",
+                    "variable-determinant-value": "Txn.sender()"
+                },
+                "code": "txn_sender = Txn.sender()"
+            },
+            {
+                "type": "address",
+                "name": "creator_address",
+                "method": "simple_Call",
+                "fields": {
+                    "variable-name": "creator_address",
+                    "variable-selection": "Global.creator_address()",
+                    "variable-determinant-value": "Global.creator_address()"
+                },
+                "code": "creator_address = Global.creator_address()"
+            },
+            {
+                "type": "integer",
+                "name": "minimum_amount",
+                "method": "simple_Call",
+                "fields": {
+                    "variable-name": "minimum_amount",
+                    "variable-field_integral_value": "1000000",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "minimum_amount = Int(1000000)"
+            },
+            {
+                "type": "asset_holding",
+                "name": "algo_balance",
+                "method": "simple_Call",
+                "fields": {
+                    "variable-name": "algo_balance",
+                    "account": "txn_sender",
+                    "variable-selection": "$ALGO",
+                    "variable-determinant-value": "$ALGO"
+                },
+                "code": "algo_balance = Balance(txn_sender)"
+            }
+        ],
+        "global_states": [],
+        "upon_opt_in": false,
+        "use_on_create": false,
+        "schema_edited": false
+    }
+}
