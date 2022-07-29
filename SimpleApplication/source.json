@@ -1,0 +1,178 @@
+{
+    "methods": {
+        "simple_method": [
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "txn_sender",
+                        "operator": "==",
+                        "operand_two": "creator_address"
+                    },
+                    "tab": 4
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 5
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 5
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "approve"
+                    },
+                    "tab": 6
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 3
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 3
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "reject"
+                    },
+                    "tab": 7
+                }
+            ]
+        ]
+    },
+    "app": {
+        "type": "app",
+        "name": "body",
+        "data": {
+            "localNumUints": 8,
+            "localNumBytes": 8,
+            "globalNumUints": 32,
+            "globalNumBytes": 32
+        }
+    },
+    "nodes": 7,
+    "node_counter_": 7,
+    "contract_schema": {
+        "variables": [
+            {
+                "type": "address",
+                "name": "txn_sender",
+                "method": "simple_method",
+                "fields": {
+                    "variable-name": "txn_sender",
+                    "variable-selection": "Txn.sender()",
+                    "variable-determinant-value": "Txn.sender()"
+                },
+                "code": "txn_sender = Txn.sender()"
+            },
+            {
+                "type": "address",
+                "name": "creator_address",
+                "method": "simple_method",
+                "fields": {
+                    "variable-name": "creator_address",
+                    "variable-selection": "Global.creator_address()",
+                    "variable-determinant-value": "Global.creator_address()"
+                },
+                "code": "creator_address = Global.creator_address()"
+            }
+        ],
+        "global_states": [],
+        "upon_opt_in": false,
+        "use_on_create": false,
+        "schema_edited": false
+    }
+}
