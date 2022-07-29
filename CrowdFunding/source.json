@@ -1,0 +1,725 @@
+{
+    "methods": {
+        "receive_funds": [
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "txn_a_type_enum",
+                        "operator": "==",
+                        "operand_two": "txn_a_type"
+                    },
+                    "tab": 5
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "txn_b_type_enum",
+                        "operator": "==",
+                        "operand_two": "txn_b_type"
+                    },
+                    "tab": 6
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "txn_b_rekey_to",
+                        "operator": "==",
+                        "operand_two": "zero_address"
+                    },
+                    "tab": 7
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "txn_b_close_remainder_to",
+                        "operator": "==",
+                        "operand_two": "zero_address"
+                    },
+                    "tab": 9
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "txn_b_amount",
+                        "operator": "&gt;=",
+                        "operand_two": "min_amount_to_send"
+                    },
+                    "tab": 14
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 11
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 11
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "approve"
+                    },
+                    "tab": 12
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 3
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 3
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "reject"
+                    },
+                    "tab": 13
+                }
+            ]
+        ],
+        "disburse_funds": [
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 15
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 15
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 16
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 15
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 16
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 18
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 15
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 16
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 18
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "group_size",
+                        "operator": "==",
+                        "operand_two": "one"
+                    },
+                    "tab": 19
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 15
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 16
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 18
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "txn_sender",
+                        "operator": "==",
+                        "operand_two": "creator_address"
+                    },
+                    "tab": 20
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 15
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 16
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 21
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 15
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 16
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 21
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "xfer_algo",
+                        "xfer_algo_receiver": "disburse_to",
+                        "xfer_algo_amount": "withdrawable_balance"
+                    },
+                    "tab": 23
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 15
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 16
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 21
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "approve"
+                    },
+                    "tab": 24
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 15
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 17
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 15
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 17
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "reject"
+                    },
+                    "tab": 22
+                }
+            ]
+        ]
+    },
+    "app": {
+        "type": "app",
+        "name": "body",
+        "data": {
+            "localNumUints": 8,
+            "localNumBytes": 8,
+            "globalNumUints": 32,
+            "globalNumBytes": 32
+        }
+    },
+    "nodes": 22,
+    "node_counter_": 24,
+    "contract_schema": {
+        "variables": [
+            {
+                "type": "txn_type",
+                "name": "txn_a_type_enum",
+                "method": "receive_funds",
+                "fields": {
+                    "variable-name": "txn_a_type_enum",
+                    "variable-selection": "TxnType.ApplicationCall"
+                },
+                "code": "txn_a_type_enum = TxnType.ApplicationCall"
+            },
+            {
+                "type": "txn_type",
+                "name": "txn_b_type_enum",
+                "method": "receive_funds",
+                "fields": {
+                    "variable-name": "txn_b_type_enum",
+                    "variable-selection": "TxnType.Payment"
+                },
+                "code": "txn_b_type_enum = TxnType.Payment"
+            },
+            {
+                "type": "global_field",
+                "name": "zero_address",
+                "method": "receive_funds",
+                "fields": {
+                    "variable-name": "zero_address",
+                    "variable-selection": ".zero_address()"
+                },
+                "code": "zero_address = Global.zero_address()"
+            },
+            {
+                "type": "grouped_transaction_field",
+                "name": "txn_a_type",
+                "method": "receive_funds",
+                "fields": {
+                    "variable-name": "txn_a_type",
+                    "gtxn_index": "0",
+                    "variable-selection": ".type_enum()"
+                },
+                "code": "txn_a_type = Gtxn[0].type_enum()"
+            },
+            {
+                "type": "grouped_transaction_field",
+                "name": "txn_b_type",
+                "method": "receive_funds",
+                "fields": {
+                    "variable-name": "txn_b_type",
+                    "gtxn_index": "1",
+                    "variable-selection": ".type_enum()"
+                },
+                "code": "txn_b_type = Gtxn[1].type_enum()"
+            },
+            {
+                "type": "grouped_transaction_field",
+                "name": "txn_b_amount",
+                "method": "receive_funds",
+                "fields": {
+                    "variable-name": "txn_b_amount",
+                    "gtxn_index": "1",
+                    "variable-selection": ".amount()"
+                },
+                "code": "txn_b_amount = Gtxn[1].amount()"
+            },
+            {
+                "type": "integer",
+                "name": "min_amount_to_send",
+                "method": "receive_funds",
+                "fields": {
+                    "variable-name": "min_amount_to_send",
+                    "variable-field_integral_value": "100000",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "min_amount_to_send = Int(100000)"
+            },
+            {
+                "type": "global_field",
+                "name": "group_size",
+                "method": "receive_funds",
+                "fields": {
+                    "variable-name": "group_size",
+                    "variable-selection": ".group_size()"
+                },
+                "code": "group_size = Global.group_size()"
+            },
+            {
+                "type": "integer",
+                "name": "size",
+                "method": "receive_funds",
+                "fields": {
+                    "variable-name": "size",
+                    "variable-field_integral_value": "2",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "size = Int(2)"
+            },
+            {
+                "type": "grouped_transaction_field",
+                "name": "txn_b_rekey_to",
+                "method": "receive_funds",
+                "fields": {
+                    "variable-name": "txn_b_rekey_to",
+                    "gtxn_index": "1",
+                    "variable-selection": ".rekey_to()"
+                },
+                "code": "txn_b_rekey_to = Gtxn[1].rekey_to()"
+            },
+            {
+                "type": "grouped_transaction_field",
+                "name": "txn_b_close_remainder_to",
+                "method": "receive_funds",
+                "fields": {
+                    "variable-name": "txn_b_close_remainder_to",
+                    "gtxn_index": "1",
+                    "variable-selection": ".close_remainder_to()"
+                },
+                "code": "txn_b_close_remainder_to = Gtxn[1].close_remainder_to()"
+            },
+            {
+                "type": "address",
+                "name": "txn_sender",
+                "method": "disburse_funds",
+                "fields": {
+                    "variable-name": "txn_sender",
+                    "variable-selection": "Txn.sender()",
+                    "variable-determinant-value": "Txn.sender()"
+                },
+                "code": "txn_sender = Txn.sender()"
+            },
+            {
+                "type": "address",
+                "name": "creator_address",
+                "method": "disburse_funds",
+                "fields": {
+                    "variable-name": "creator_address",
+                    "variable-selection": "Global.creator_address()",
+                    "variable-determinant-value": "Global.creator_address()"
+                },
+                "code": "creator_address = Global.creator_address()"
+            },
+            {
+                "type": "integer",
+                "name": "one",
+                "method": "disburse_funds",
+                "fields": {
+                    "variable-name": "one",
+                    "variable-field_integral_value": "1",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "one = Int(1)"
+            },
+            {
+                "type": "global_field",
+                "name": "application_address",
+                "method": "disburse_funds",
+                "fields": {
+                    "variable-name": "application_address",
+                    "variable-selection": ".current_application_address()"
+                },
+                "code": "application_address = Global.current_application_address()"
+            },
+            {
+                "type": "min_balance",
+                "name": "min_balance",
+                "method": "disburse_funds",
+                "fields": {
+                    "variable-name": "min_balance",
+                    "variable-field_account": "application_address",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "min_balance = MinBalance(application_address)"
+            },
+            {
+                "type": "address",
+                "name": "disburse_to",
+                "method": "disburse_funds",
+                "fields": {
+                    "variable-name": "disburse_to",
+                    "variable-selection": "address",
+                    "variable-determinant-value": "HQY7QS7PICZMKJOOXCCARQ2E6W237M54T3LRLSHT6GBGHQC5GSMIQMPKHA"
+                },
+                "code": "disburse_to = Addr('HQY7QS7PICZMKJOOXCCARQ2E6W237M54T3LRLSHT6GBGHQC5GSMIQMPKHA')"
+            },
+            {
+                "type": "asset_holding",
+                "name": "balance",
+                "method": "disburse_funds",
+                "fields": {
+                    "variable-name": "balance",
+                    "account": "application_address",
+                    "variable-selection": "$ALGO",
+                    "variable-determinant-value": "$ALGO"
+                },
+                "code": "balance = Balance(application_address)"
+            },
+            {
+                "type": "miscellaneous",
+                "name": "withdrawable_balance",
+                "method": "disburse_funds",
+                "fields": {
+                    "variable-name": "withdrawable_balance",
+                    "variable-selection": "Arithmetic",
+                    "expression-list": "balance - min_balance"
+                },
+                "code": "withdrawable_balance = balance - min_balance"
+            }
+        ],
+        "global_states": [],
+        "upon_opt_in": false,
+        "use_on_create": false,
+        "schema_edited": false
+    }
+}

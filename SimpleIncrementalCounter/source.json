@@ -1,0 +1,111 @@
+{
+    "methods": {
+        "increment_call": [
+            [
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 1
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "add_global_state",
+                        "add_global_state_key": "counter_key",
+                        "add_global_state_value": "incremented"
+                    },
+                    "tab": 2
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "approve"
+                    },
+                    "tab": 3
+                }
+            ]
+        ]
+    },
+    "app": {
+        "type": "app",
+        "name": "body",
+        "data": {
+            "localNumUints": 8,
+            "localNumBytes": 8,
+            "globalNumUints": 32,
+            "globalNumBytes": 32
+        }
+    },
+    "nodes": 3,
+    "node_counter_": 3,
+    "contract_schema": {
+        "variables": [
+            {
+                "type": "byte_string",
+                "name": "counter_key",
+                "method": "increment_call",
+                "fields": {
+                    "variable-name": "counter_key",
+                    "variable-field_string_value": "counter",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "counter_key = Bytes('counter')"
+            },
+            {
+                "type": "global_state",
+                "name": "counter_value",
+                "method": "increment_call",
+                "fields": {
+                    "variable-name": "counter_value",
+                    "state-key": "counter_key"
+                },
+                "code": "counter_value = App.globalGet(counter_key)"
+            },
+            {
+                "type": "integer",
+                "name": "increment_by",
+                "method": "increment_call",
+                "fields": {
+                    "variable-name": "increment_by",
+                    "variable-field_integral_value": "1",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "increment_by = Int(1)"
+            },
+            {
+                "type": "miscellaneous",
+                "name": "incremented",
+                "method": "increment_call",
+                "fields": {
+                    "variable-name": "incremented",
+                    "variable-selection": "Arithmetic",
+                    "expression-list": "counter_value + increment_by"
+                },
+                "code": "incremented = counter_value + increment_by"
+            }
+        ],
+        "global_states": [],
+        "upon_opt_in": false,
+        "use_on_create": false,
+        "schema_edited": false
+    }
+}
