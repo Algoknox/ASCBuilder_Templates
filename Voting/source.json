@@ -1,0 +1,737 @@
+{
+    "methods": {
+        "cast_vote": [
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "timestamp",
+                        "operator": ">=",
+                        "operand_two": "start_date_state"
+                    },
+                    "tab": 6
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "timestamp",
+                        "operator": "<=",
+                        "operand_two": "end_date_state"
+                    },
+                    "tab": 7
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "and_conditional",
+                    "data": "",
+                    "tab": 4
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "user_choice",
+                        "operator": "!=",
+                        "operand_two": "zero"
+                    },
+                    "tab": 8
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 5
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 5
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "add_global_state",
+                        "add_global_state_key": "increment_user_choice",
+                        "add_global_state_value": "incrementation"
+                    },
+                    "tab": 9
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 5
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "add_local_state",
+                        "add_local_state_account": "txn_sender",
+                        "add_local_state_key": "choice",
+                        "add_local_state_value": "decision"
+                    },
+                    "tab": 10
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 1
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 2
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 5
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "approve"
+                    },
+                    "tab": 11
+                }
+            ]
+        ],
+        "clearProgram": [
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 13
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 13
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 14
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 13
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 14
+                },
+                {
+                    "type": "node",
+                    "name": "condition",
+                    "data": {
+                        "operand_one": "choice_of_user",
+                        "operator": "!=",
+                        "operand_two": "zero_value"
+                    },
+                    "tab": 16
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 13
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 14
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 17
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 13
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 14
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 17
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "remove_local_state",
+                        "remove_local_state_account": "sender",
+                        "remove_local_state_key": "user_state_key"
+                    },
+                    "tab": 18
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 13
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 14
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 17
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "add_global_state",
+                        "add_global_state_key": "decrement_from",
+                        "add_global_state_value": "deduct"
+                    },
+                    "tab": 19
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 13
+                },
+                {
+                    "type": "node",
+                    "name": "met",
+                    "data": "",
+                    "tab": 14
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 17
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "approve"
+                    },
+                    "tab": 20
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 13
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 15
+                }
+            ],
+            [
+                {
+                    "type": "node",
+                    "name": "decision",
+                    "data": "",
+                    "tab": 13
+                },
+                {
+                    "type": "node",
+                    "name": "routine",
+                    "data": "",
+                    "tab": 15
+                },
+                {
+                    "type": "node",
+                    "name": "action",
+                    "data": {
+                        "type": "approve"
+                    },
+                    "tab": 21
+                }
+            ]
+        ]
+    },
+    "app": {
+        "type": "app",
+        "name": "body",
+        "data": {
+            "localNumUints": 8,
+            "localNumBytes": 8,
+            "globalNumUints": 32,
+            "globalNumBytes": 32
+        }
+    },
+    "nodes": 19,
+    "node_counter_": 21,
+    "contract_schema": {
+        "variables": [
+            {
+                "type": "byte_string",
+                "name": "start_date",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "start_date",
+                    "variable-field_string_value": "start_date",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "start_date = Bytes('start_date')"
+            },
+            {
+                "type": "byte_string",
+                "name": "end_date",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "end_date",
+                    "variable-field_string_value": "end_date",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "end_date = Bytes('end_date')"
+            },
+            {
+                "type": "byte_string",
+                "name": "positive",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "positive",
+                    "variable-field_string_value": "positive",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "positive = Bytes('positive')"
+            },
+            {
+                "type": "byte_string",
+                "name": "negative",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "negative",
+                    "variable-field_string_value": "negative",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "negative = Bytes('negative')"
+            },
+            {
+                "type": "global_state",
+                "name": "start_date_state",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "start_date_state",
+                    "state-key": "start_date"
+                },
+                "code": "start_date_state = App.globalGet(start_date)"
+            },
+            {
+                "type": "global_state",
+                "name": "end_date_state",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "end_date_state",
+                    "state-key": "end_date"
+                },
+                "code": "end_date_state = App.globalGet(end_date)"
+            },
+            {
+                "type": "global_state",
+                "name": "positive_state",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "positive_state",
+                    "state-key": "positive"
+                },
+                "code": "positive_state = App.globalGet(positive)"
+            },
+            {
+                "type": "address",
+                "name": "txn_sender",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "txn_sender",
+                    "variable-selection": "Txn.sender()",
+                    "variable-determinant-value": "Txn.sender()"
+                },
+                "code": "txn_sender = Txn.sender()"
+            },
+            {
+                "type": "byte_string",
+                "name": "choice",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "choice",
+                    "variable-field_string_value": "choice",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "choice = Bytes('choice')"
+            },
+            {
+                "type": "integer",
+                "name": "increment",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "increment",
+                    "variable-field_integral_value": "1",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "increment = Int(1)"
+            },
+            {
+                "type": "global_state",
+                "name": "negative_state",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "negative_state",
+                    "state-key": "negative"
+                },
+                "code": "negative_state = App.globalGet(negative)"
+            },
+            {
+                "type": "local_state",
+                "name": "user_choice",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "user_choice",
+                    "local-account-address": "txn_sender",
+                    "state-key": "choice"
+                },
+                "code": "user_choice = App.localGet(txn_sender, choice)"
+            },
+            {
+                "type": "global_field",
+                "name": "timestamp",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "timestamp",
+                    "variable-selection": ".latest_timestamp()"
+                },
+                "code": "timestamp = Global.latest_timestamp()"
+            },
+            {
+                "type": "integer",
+                "name": "zero",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "zero",
+                    "variable-field_integral_value": "0",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "zero = Int(0)"
+            },
+            {
+                "type": "argument",
+                "name": "decision",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "decision",
+                    "variable-field_Txn.application_args": "1",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "decision = Txn.application_args[1]"
+            },
+            {
+                "type": "global_state",
+                "name": "increment_user_choice",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "increment_user_choice",
+                    "state-key": "decision"
+                },
+                "code": "increment_user_choice = App.globalGet(decision)"
+            },
+            {
+                "type": "miscellaneous",
+                "name": "incrementation",
+                "method": "cast_vote",
+                "fields": {
+                    "variable-name": "incrementation",
+                    "variable-selection": "Arithmetic",
+                    "expression-list": "increment_user_choice + increment"
+                },
+                "code": "incrementation = increment_user_choice + increment"
+            },
+            {
+                "type": "byte_string",
+                "name": "user_state_key",
+                "method": "clearProgram",
+                "fields": {
+                    "variable-name": "user_state_key",
+                    "variable-field_string_value": "choice",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "user_state_key = Bytes('choice')"
+            },
+            {
+                "type": "address",
+                "name": "sender",
+                "method": "clearProgram",
+                "fields": {
+                    "variable-name": "sender",
+                    "variable-selection": "Txn.sender()",
+                    "variable-determinant-value": "Txn.sender()"
+                },
+                "code": "sender = Txn.sender()"
+            },
+            {
+                "type": "local_state",
+                "name": "choice_of_user",
+                "method": "clearProgram",
+                "fields": {
+                    "variable-name": "choice_of_user",
+                    "local-account-address": "sender",
+                    "state-key": "user_state_key"
+                },
+                "code": "choice_of_user = App.localGet(sender, user_state_key)"
+            },
+            {
+                "type": "integer",
+                "name": "zero_value",
+                "method": "clearProgram",
+                "fields": {
+                    "variable-name": "zero_value",
+                    "variable-field_integral_value": "0",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "zero_value = Int(0)"
+            },
+            {
+                "type": "integer",
+                "name": "one",
+                "method": "clearProgram",
+                "fields": {
+                    "variable-name": "one",
+                    "variable-field_integral_value": "1",
+                    "variable-determinant-value": "N/A"
+                },
+                "code": "one = Int(1)"
+            },
+            {
+                "type": "global_state",
+                "name": "decrement_from",
+                "method": "clearProgram",
+                "fields": {
+                    "variable-name": "decrement_from",
+                    "state-key": "choice_of_user"
+                },
+                "code": "decrement_from = App.globalGet(choice_of_user)"
+            },
+            {
+                "type": "miscellaneous",
+                "name": "deduct",
+                "method": "clearProgram",
+                "fields": {
+                    "variable-name": "deduct",
+                    "variable-selection": "Arithmetic",
+                    "expression-list": "decrement_from - one"
+                },
+                "code": "deduct = decrement_from - one"
+            }
+        ],
+        "global_states": [
+            {
+                "name": "start_date",
+                "typ": "int",
+                "value": "Int(1659173464)"
+            },
+            {
+                "name": "end_date",
+                "typ": "int",
+                "value": "Int(1659174464)"
+            },
+            {
+                "name": "positive",
+                "typ": "int",
+                "value": "Int(0)"
+            },
+            {
+                "name": "negative",
+                "typ": "int",
+                "value": "Int(0)"
+            }
+        ],
+        "upon_opt_in": false,
+        "use_on_create": false,
+        "schema_edited": false
+    }
+}
